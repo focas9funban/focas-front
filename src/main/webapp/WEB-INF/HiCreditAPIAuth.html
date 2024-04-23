@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<TITLE>API直接授權</TITLE>
+	<style type="text/css">
+		html, body {
+		margin: 0;
+		text-align: center;
+		}
+		#d1 {
+		position: relative;
+		margin: 0 auto;
+		width: 760px;
+		text-align: center;
+		}
+	</style>
+<HEAD>
+<BODY>
+<div id='d1' align="center">
+	<FORM NAME="HiCreditAPIAuth" ACTION="HiCreditAPIAuth.jsp" METHOD="POST">
+		<H1>API直接授權</H1><BR>
+		<TABLE BORDER='1' align="center">                                
+			<TR><TD COLSPAN=2 ALIGN=CENTER><EM>輸入參數</EM></TD></TR>   
+			<TR>                                                          
+		        <TD><b>交易類別</b></TD>                                 
+		        <TD>
+		        	<INPUT TYPE="RADIO" name="Type" value="Auth" checked/><b>授權</b><BR>
+		        	<INPUT TYPE="RADIO" name="Type" value="Period"/><b>分期</b><BR>
+		        	<INPUT TYPE="RADIO" name="Type" value="Bonus"/><b>紅利</b><BR>
+		        </TD>  
+			</TR>
+			<TR>                                                          
+		        <TD><b>MerchantID</b></TD>                                 
+		        <TD><INPUT TYPE="TEXT" NAME="MerchantID" SIZE='20' value="006111111111111"/></TD>  
+			</TR>
+			<TR>                                                          
+		        <TD><b>MerchantName</b></TD>                                 
+		        <TD><INPUT TYPE="TEXT" NAME="MerchantName" SIZE='20' value="test"/></TD>  
+			</TR>
+			<TR>                                                          
+		        <TD><b>訂單編號</b></TD>                                 
+		        <TD><INPUT TYPE="TEXT" NAME="lidm" SIZE='20' value='201304-08-001'/></TD>  
+			</TR>
+			<TR>    
+		        <TD><b>訂單金額</b></TD>                                 
+		        <TD><INPUT TYPE="TEXT" NAME="purchAmt" SIZE='20' value='123'/></TD>  
+			</TR>
+			<TR>    
+		        <TD><b>分期期數</b></TD>                                 
+		        <TD><INPUT TYPE="TEXT" NAME="periodNum" SIZE='20'/></TD>  
+			</TR>
+			<TR>                                                          
+		        <TD><b>卡號</b></TD>                                 
+		        <TD><INPUT TYPE="TEXT" NAME="pan" SIZE='20' value='4907230000935105'/></TD>  
+			</TR>
+			<TR>                                                          
+		        <TD><b>效期(YYMM)</b></TD>                                 
+		        <TD><INPUT TYPE="TEXT" NAME="expiry" SIZE='20' value='1904'/></TD>  
+			</TR>
+			<TR>                                                          
+		        <TD><b>CVV2</b></TD>                                 
+		        <TD><INPUT TYPE="TEXT" NAME="cvv" SIZE='20' value='349'/></TD>  
+			</TR>
+			<TR>                                                          
+		        <TD><INPUT TYPE="SUBMIT" VALUE="執行"/></TD>                                 
+		        <TD><INPUT TYPE="RESET" VALUE="取消"/></TD>  
+			</TR>                                                       
+		</TABLE>                                                         
+	</FORM>
+</div>
+</BODY>
+</HTML>

@@ -1,6 +1,6 @@
 IP=$(ip addr |grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|grep -v 172| cut -d'/' -f 1)
 FOCAS_ROOT=/usr/AP
-FOCAS_PATH=${FOCAS_ROOT}/sinopac
+FOCAS_PATH=${FOCAS_ROOT}/focas
 FOCAS_LOG_PATH=${FOCAS_PATH}/logs
 ENV=prod
 

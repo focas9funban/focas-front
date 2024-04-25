@@ -35,7 +35,7 @@ public class SwaggerConfig {
                 null,
                 new Contact("Your Name", "Your Website", "your.email@example.com"),
                 "License",
-                "http://BankPanyment.9funban.com/swagger-ui/index.html",
+                "https://BankPanyment.9funban.com/swagger-ui/index.html",
                 new ArrayList<>()
         );
     }

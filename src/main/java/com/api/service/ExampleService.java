@@ -54,7 +54,7 @@ public class ExampleService {
 	}
 
 	public static void main(String[] args) {
-		String key = "Ocard_Sinopac";
+		String key = "";
 		String iv = "QWq2vaaB@juvTYNh";
 		String inPut = "V9kkswop4x0rEDnIgHV7TjPfXy+5qwFMg8SKx/WNZEBMZT/wm3bFP/g/YaXS82BPCMyWVw7Ll0sDXfZQCOuFxtg+I7zqRFHyRPTwVHaQtJ1UYM+BUCNbGWeDDA0TmfAgVMYStsVhRG9A5Svwjc9C7M5arw2LN91o2HCDga/sbjlJ8nFD36Kbrg4nxpasqh3N1DTaDkYkVRPTvozGAKDYZjc+swOoq3W3MftthF24vYJpSVtUxWAMYJyUCgHHijZo7gwXcCJUzgegVEeIpc6mdWysQKXoasrLvVEA68RpJ54r6beTl3MZj6GIENBvtA6RN2DKdfTVZRn3XBhCTjEFSIUrGQkfKzolgeLguE2UWw2Ezih5lwcLmIaQ6yINHE5ZUC3CZgq5uth0UI4r3673Gg52LTJx3GOdl5hcUAXWMlzrsyumGzbm8z6NGDmXq9NjCHG412XetWXMM8A1BZzlXZwpFKyQjF4dfge/aY3oy4Tuhtb/ZOXP3DS4AoT23WcztsoGo3b6lVytM+54RbNhDg==";
 

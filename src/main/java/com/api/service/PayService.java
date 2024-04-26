@@ -62,7 +62,7 @@ public class PayService {
 			}
 
 			FOCASPayRequest apiClient = new FOCASPayRequest();
-			apiClient.setAPITransType(TransType.CANCEL);
+			apiClient.setAPITransType(TransType.QUERY);
 			apiClient.setMerchantID(params.getMerchantId());
 			apiClient.setLidm(params.getLidm());
 			apiClient.transaction();

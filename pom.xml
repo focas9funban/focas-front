@@ -57,24 +57,23 @@
 		</dependency>
 		<dependency>
 			<groupId>com.focas</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
+			<artifactId>commons-httpclient</artifactId>
+			<version>1.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.google.code.gson</groupId>
+			<groupId>com.focas</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.focas</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.2.2</version>
 		</dependency>
 		<dependency>
-			<groupId>commons-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>3.1</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
-		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>1.2</version>
+			<groupId>com.focas</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
 		</dependency>
 	</dependencies>
 

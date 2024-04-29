@@ -20,6 +20,8 @@ cd ${FOCAS_PATH}
 
 touch nohup.out
 
+source /etc/profile
+
 mvn clean install
 
 mkdir -p ${FOCAS_LOG_PATH}

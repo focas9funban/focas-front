@@ -10,6 +10,7 @@ import com.api.dto.ParamsDto;
 import com.api.dto.QueryResultDto;
 import com.api.dto.ResultDto;
 import com.api.util.ToolUtil;
+import com.google.gson.Gson;
 
 import io.micrometer.core.instrument.util.StringUtils;
 
@@ -34,8 +35,7 @@ public class PayProdService {
 				throw new Exception("focas prod query can not find lidm");
 			}
 
-			result = (QueryResultDto) toolUtil.post(domain + ToolUtil.QUERY, params);
-
+			result = new Gson().fromJson(toolUtil.post(domain + ToolUtil.QUERY, params), QueryResultDto.class);
 		} catch (Exception ex) {
 			log.error("focas prod query error: " + ex.getMessage(), ex);
 			result.setStatus("-1");
@@ -47,7 +47,7 @@ public class PayProdService {
 
 		return result;
 	}
-	
+
 	public ResultDto cancel(ParamsDto params) {
 		log.info("focas prod cancel start...");
 		log.info("focas prod cancel lidm:" + params.getLidm());
@@ -58,7 +58,7 @@ public class PayProdService {
 				throw new Exception("focas prod cancel can not find lidm");
 			}
 
-			result = (ResultDto) toolUtil.post(domain + ToolUtil.CANCEL, params);
+			result = new Gson().fromJson(toolUtil.post(domain + ToolUtil.CANCEL, params), ResultDto.class);
 
 		} catch (Exception ex) {
 			log.error("focas prod cancel error: " + ex.getMessage(), ex);
@@ -82,8 +82,7 @@ public class PayProdService {
 				throw new Exception("focas prod refund can not find lidm");
 			}
 
-			result = (ResultDto) toolUtil.post(domain + ToolUtil.REFUND, params);
-
+			result = new Gson().fromJson(toolUtil.post(domain + ToolUtil.REFUND, params), ResultDto.class);
 		} catch (Exception ex) {
 			log.error("focas prod refund error: " + ex.getMessage(), ex);
 			result.setStatus("-1");

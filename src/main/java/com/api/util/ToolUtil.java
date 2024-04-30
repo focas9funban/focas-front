@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.api.dto.ParamsDto;
+import com.api.dto.ResultDto;
 import com.google.gson.Gson;
 
 @Service
@@ -24,8 +25,8 @@ public class ToolUtil {
 	
 	public static final String REFUND = "/focas/payment/refund";
 	
-	public Object post(String path, ParamsDto params) {
-		Object result = null;
+	public ResultDto post(String path, ParamsDto params) {
+		ResultDto result = null;
 
 		try {
 			log.info("POST path: " + path);
@@ -55,7 +56,7 @@ public class ToolUtil {
 			}
 
 			Gson gson = new Gson();
-			result = gson.fromJson(response.toString(), Object.class);
+			result = gson.fromJson(response.toString(), ResultDto.class);
 
 			connection.disconnect();
 		} catch (Exception e) {

@@ -33,7 +33,7 @@ public class SwaggerConfig {
                 "Bank of Focas",
                 "1.0",
                 null,
-                new Contact("Your Name", "Your Website", "your.email@example.com"),
+                new Contact("Focas", "9funban.com", "focas9funban@gmail.com"),
                 "License",
                 "https://BankPanyment.9funban.com/swagger-ui/index.html",
                 new ArrayList<>()

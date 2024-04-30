@@ -10,28 +10,28 @@ import org.springframework.web.bind.annotation.RestController;
 import com.api.dto.ParamsDto;
 import com.api.dto.QueryResultDto;
 import com.api.dto.ResultDto;
-import com.api.service.PayService;
+import com.api.service.PayProdService;
 
 @RestController
-@RequestMapping("/focas/payment")
-public class PayController {
+@RequestMapping("/prod/focas/payment")
+public class PayProdController {
 	
 	@Autowired
-	PayService payService;
-	
-	@PostMapping("/cancel")
-	public ResponseEntity<ResultDto> cancel(@RequestBody ParamsDto params) {
-		return ResponseEntity.ok(payService.cancel(params));
-	}
+	PayProdService payProdService;
 	
 	@PostMapping("/query")
 	public ResponseEntity<QueryResultDto> query(@RequestBody ParamsDto params) {
-		return ResponseEntity.ok(payService.query(params));
+		return ResponseEntity.ok(payProdService.query(params));
+	}
+	
+	@PostMapping("/cancel")
+	public ResponseEntity<ResultDto> cancel(@RequestBody ParamsDto params) {
+		return ResponseEntity.ok(payProdService.cancel(params));
 	}
 	
 	@PostMapping("/refund")
 	public ResponseEntity<ResultDto> refund(@RequestBody ParamsDto params) {
-		return ResponseEntity.ok(payService.refund(params));
+		return ResponseEntity.ok(payProdService.refund(params));
 	}
 	
 }

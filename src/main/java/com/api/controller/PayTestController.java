@@ -13,25 +13,25 @@ import com.api.dto.ResultDto;
 import com.api.service.PayTestService;
 
 @RestController
-@RequestMapping("/focas/payment/test")
+@RequestMapping("/test/focas/payment")
 public class PayTestController {
 	
 	@Autowired
-	PayTestService payService;
-	
-	@PostMapping("/cancel")
-	public ResponseEntity<ResultDto> cancel(@RequestBody ParamsDto params) {
-		return ResponseEntity.ok(payService.cancel(params));
-	}
+	PayTestService payTestService;
 	
 	@PostMapping("/query")
 	public ResponseEntity<QueryResultDto> query(@RequestBody ParamsDto params) {
-		return ResponseEntity.ok(payService.query(params));
+		return ResponseEntity.ok(payTestService.query(params));
+	}
+	
+	@PostMapping("/cancel")
+	public ResponseEntity<ResultDto> cancel(@RequestBody ParamsDto params) {
+		return ResponseEntity.ok(payTestService.cancel(params));
 	}
 	
 	@PostMapping("/refund")
 	public ResponseEntity<ResultDto> refund(@RequestBody ParamsDto params) {
-		return ResponseEntity.ok(payService.refund(params));
+		return ResponseEntity.ok(payTestService.refund(params));
 	}
 	
 }

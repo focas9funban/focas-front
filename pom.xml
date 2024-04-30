@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com</groupId>
-	<artifactId>api</artifactId>
+	<artifactId>focas-front</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>test Maven Webapp</name>
+	<name>Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -38,44 +38,6 @@
 			<artifactId>springfox-boot-starter</artifactId>
 			<version>3.0.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.json/json -->
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20231013</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.focas</groupId>
-			<artifactId>FISCToolkit</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.focas</groupId>
-			<artifactId>BC_14_122</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.focas</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.focas</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>1.0</version>
-		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>com.focas</groupId>-->
-<!--			<artifactId>gson</artifactId>-->
-<!--			<version>2.2.2</version>-->
-<!--		</dependency>-->
-		<dependency>
-			<groupId>com.focas</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 		<dependency>
 		    <groupId>com.google.code.gson</groupId>
 		    <artifactId>gson</artifactId>
@@ -83,16 +45,8 @@
 		</dependency>
 	</dependencies>
 
-	<repositories>
-		<repository>
-			<id>lib</id>
-			<name>lib</name>
-			<url>file:///${basedir}/lib</url>
-		</repository>
-	</repositories>
-
 	<build>
-		<finalName>api</finalName>
+		<finalName>focas-front</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

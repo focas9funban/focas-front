@@ -14,84 +14,84 @@ import com.api.util.ToolUtil;
 import io.micrometer.core.instrument.util.StringUtils;
 
 @Service
-public class PayTestService {
+public class PayProdService {
 
-	private static final Logger log = LoggerFactory.getLogger(PayTestService.class);
+	private static final Logger log = LoggerFactory.getLogger(PayProdService.class);
 
 	@Autowired
 	private ToolUtil toolUtil;
 
-	@Value("${focas.domain.test}")
+	@Value("${focas.domain.prod}")
 	private String domain;
 
 	public QueryResultDto query(ParamsDto params) {
-		log.info("focas test query start...");
-		log.info("focas test query lidm:" + params.getLidm());
+		log.info("focas prod query start...");
+		log.info("focas prod query lidm:" + params.getLidm());
 
 		QueryResultDto result = new QueryResultDto();
 		try {
 			if (StringUtils.isBlank(params.getLidm())) {
-				throw new Exception("focas test query can not find lidm");
+				throw new Exception("focas prod query can not find lidm");
 			}
 
 			result = (QueryResultDto) toolUtil.post(domain + ToolUtil.QUERY, params);
 
 		} catch (Exception ex) {
-			log.error("focas test query error: " + ex.getMessage(), ex);
+			log.error("focas prod query error: " + ex.getMessage(), ex);
 			result.setStatus("-1");
 			result.setErrCode("-999");
 			result.setErrDesc(ex.getMessage());
 		}
 
-		log.info("focas test query end...");
+		log.info("focas prod query end...");
 
 		return result;
 	}
-
+	
 	public ResultDto cancel(ParamsDto params) {
-		log.info("focas test cancel start...");
-		log.info("focas test cancel lidm:" + params.getLidm());
+		log.info("focas prod cancel start...");
+		log.info("focas prod cancel lidm:" + params.getLidm());
 
 		ResultDto result = new ResultDto();
 		try {
 			if (StringUtils.isBlank(params.getLidm())) {
-				throw new Exception("focas test cancel can not find lidm");
+				throw new Exception("focas prod cancel can not find lidm");
 			}
 
 			result = (ResultDto) toolUtil.post(domain + ToolUtil.CANCEL, params);
 
 		} catch (Exception ex) {
-			log.error("focas test cancel error: " + ex.getMessage(), ex);
+			log.error("focas prod cancel error: " + ex.getMessage(), ex);
 			result.setStatus("-1");
 			result.setErrCode("-999");
 			result.setErrDesc(ex.getMessage());
 		}
 
-		log.info("focas test cancel end...");
+		log.info("focas prod cancel end...");
 
 		return result;
 	}
-	
+
 	public ResultDto refund(ParamsDto params) {
-		log.info("focas test refund start...");
-		log.info("focas test refund lidm:" + params.getLidm());
+		log.info("focas prod refund start...");
+		log.info("focas prod refund lidm:" + params.getLidm());
 
 		ResultDto result = new ResultDto();
 		try {
 			if (StringUtils.isBlank(params.getLidm())) {
-				throw new Exception("focas test refund can not find lidm");
+				throw new Exception("focas prod refund can not find lidm");
 			}
 
 			result = (ResultDto) toolUtil.post(domain + ToolUtil.REFUND, params);
 
 		} catch (Exception ex) {
-			log.error("focas test refund error: " + ex.getMessage(), ex);
+			log.error("focas prod refund error: " + ex.getMessage(), ex);
 			result.setStatus("-1");
 			result.setErrCode("-999");
 			result.setErrDesc(ex.getMessage());
 		}
 
-		log.info("focas test refund end...");
+		log.info("focas prod refund end...");
 
 		return result;
 	}
